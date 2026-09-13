@@ -55,6 +55,27 @@ Los inputs están **ocultos visualmente** pero **focusables**, y las etiquetas a
 
 **Limitación aceptada**: el estado elegido no persiste entre páginas porque no hay JavaScript ni cookies. Está documentado en `accesibilidad.html`.
 
+## Patrón de tarjeta de artículo
+
+Cada `.tarjeta-articulo` contiene un único elemento interactivo: `<a class="tarjeta-articulo__enlace">` que envuelve íntegramente la tarjeta. La estructura interna es:
+
+```html
+<a class="tarjeta-articulo__enlace" href="articulos/categoria/slug.pdf" type="application/pdf" download>
+  <h3 class="tarjeta-articulo__titulo">Nombre del artículo</h3>
+  <img class="tarjeta-articulo__imagen" alt="Descripción detallada (sincronizada con ficha .md)" src="...">
+  <p class="tarjeta-articulo__descripcion">Presentación breve</p>
+  <p class="tarjeta-articulo__acciones"><span class="enlace-info">Ver ficha en PDF</span></p>
+</a>
+```
+
+**Convenciones obligatorias:**
+- El único `<a>` de la tarjeta es el que la envuelve completamente: `href`, `type="application/pdf"` y `download` van en ese elemento.
+- `.enlace-info` es un `<span>` **decorativo sin href**. No es un segundo enlace.
+- El `alt=""` de la `<img>` **sigue siendo descripción de la imagen, no del destino**, y debe coincidir carácter por carácter con `texto-alternativo` de la ficha `.md` (regla de sincronía).
+- Nunca agregar un segundo elemento interactivo dentro de `.tarjeta-articulo__enlace` (botón, enlace extra, `<label>`, etc.): el navegador lo rechazaría como HTML inválido (`nested-interactive`).
+
+Al navegar con Tab, el lector de pantalla anuncia el nombre accesible completo del enlace (título + alt de imagen + descripción + etiqueta de acción), exponiendo toda la información de la tarjeta antes de descargar el PDF.
+
 ## Elemento `aria-current="page"`
 
 El atributo `aria-current="page"` debe estar en el enlace del nav principal **de la página actual y solo en ese**. Ej: en `index.html`, debe estar en `<a href="index.html" aria-current="page">Inicio</a>`.
@@ -78,9 +99,11 @@ Son temporales. El dueño del emprendimiento los reemplaza por imágenes reales 
 - **Sin formulario de contacto**: requeriría backend. El contacto es por email/WhatsApp.
 - **Arquitectura multi-página**: no single-page. Garantiza order de lectura lógico por página sin anclas complejas.
 
-## Trade-off de accesibilidad documentado
+## Trade-offs de accesibilidad documentados
 
-**axe-core marca una violación "moderate"**: los 7 radios de accesibilidad quedan fuera de cualquier `<main>`, `<nav>` u otro landmark. Es inherente al mecanismo CSS puro (los inputs deben estar fuera de `.lienzo` para que `:checked ~ .lienzo` funcione) y no tiene mitigación sin romper el mecanismo o violar otro criterio WCAG. No afecta conformidad WCAG AA. Aceptado y documentado en `accesibilidad.html`.
+**1. axe-core marca una violación "moderate" de `region`**: los 7 radios de accesibilidad quedan fuera de cualquier `<main>`, `<nav>` u otro landmark. Es inherente al mecanismo CSS puro (los inputs deben estar fuera de `.lienzo` para que `:checked ~ .lienzo` funcione) y no tiene mitigación sin romper el mecanismo o violar otro criterio WCAG. No afecta conformidad WCAG AA. Aceptado.
+
+**2. Nombre accesible verboso y pérdida de selección de texto en tarjetas**: al envolver íntegramente una tarjeta de artículo en un único `<a>`, el nombre accesible del enlace queda largo (~30+ palabras) porque incluye título + alt de imagen + descripción + etiqueta de acción. Es necesario: la regla de sincronía obligatoria `alt` ↔ ficha `.md` impide dejar el `alt` vacío (técnica WCAG H2), y no hay forma de exponer esa información al navegar con Tab sin incluirla en el nombre accesible (se descartó `aria-describedby` porque el Narrador de Windows no lo anuncia sobre enlaces). Además, arrastrar el mouse dentro de la tarjeta inicia un drag del enlace (comportamiento estándar del navegador) en lugar de seleccionar texto. Es un costo necesario para que la información visual de la tarjeta sea accesible al teclado. Aceptado y documentado en `accesibilidad.html`.
 
 ## Validadores a correr después de cualquier cambio
 

@@ -678,6 +678,27 @@ main li {
   box-shadow: var(--sombra-suave);
 }
 
+/* La tarjeta de artículo es un ÚNICO enlace que abarca título, imagen,
+   descripción y botón: así su nombre accesible incluye todo eso y se
+   anuncia completo al llegar con Tab, sin duplicar texto en el DOM.
+   Se usa doble clase a propósito: `li a` (bloque de alto contraste) y
+   `a:hover` (tipografía base) ganarían por especificidad si no. */
+.tarjeta-articulo .tarjeta-articulo__enlace {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-s);
+  flex: 1 1 auto;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Señal de interacción no cromática sobre el título (nunca sólo color). */
+.tarjeta-articulo__enlace:hover .tarjeta-articulo__titulo,
+.tarjeta-articulo__enlace:focus .tarjeta-articulo__titulo {
+  text-decoration: underline;
+  text-underline-offset: .2em;
+}
+
 .tarjeta-articulo__imagen {
   width: 100%;
   height: auto;
@@ -727,8 +748,10 @@ main li {
   transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
 }
 
-.enlace-info:hover,
-.enlace-info:focus {
+/* `.enlace-info` ahora es un <span> decorativo: el estado lo dispara el
+   enlace que envuelve la tarjeta, no el botón en sí. */
+.tarjeta-articulo__enlace:hover .enlace-info,
+.tarjeta-articulo__enlace:focus .enlace-info {
   background-color: var(--color-acento);
   border-color: var(--color-acento);
   color: var(--color-primario-contraste);
