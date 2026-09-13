@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manos de Barro y Lana — Artesanías en tejido, cerámica y pintura</title>
+  <meta name="description" content="Emprendimiento de artesanías: tejidos en telar, cerámica torneada a mano y pintura original. Sitio accesible.">
+  <meta name="author" content="Manos de Barro y Lana">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#7A3E12" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14110F" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://manosdebarroylana.example/index.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="estilosIA.css">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Manos de Barro y Lana">
+  <meta property="og:title" content="Manos de Barro y Lana — Artesanías en tejido, cerámica y pintura">
+  <meta property="og:description" content="Emprendimiento de artesanías: tejidos en telar, cerámica torneada a mano y pintura original. Sitio accesible.">
+  <meta property="og:url" content="https://manosdebarroylana.example/index.html">
+</head>
+
+<body>
+  <nav class="saltos" aria-label="Saltos de navegación">
+    <a href="#contenido">Saltar al contenido principal</a>
+    <a href="#navegacion-principal">Saltar a la navegación principal</a>
+  </nav>
+
+  <svg class="svg-filtros" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="filtro-svg-protanopia" color-interpolation-filters="linearRGB">
+        <feColorMatrix type="matrix" values="0.567 0.433 0 0 0
+        0.558 0.442 0 0 0
+        0     0.242 0.758 0 0
+        0     0     0     1 0" result="simulado" />
+        <feComposite in="SourceGraphic" in2="simulado" operator="arithmetic" k1="0" k2="1" k3="-1" k4="0" result="error" />
+        <feColorMatrix in="error" type="matrix" values="0   0   0   0 0
+        0.7 1   0   0 0
+        0.7 0   1   0 0
+        0   0   0   1 0" result="correccion" />
+        <feComposite in="SourceGraphic" in2="correccion" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+      </filter>
+      <filter id="filtro-svg-deuteranopia" color-interpolation-filters="linearRGB">
+        <feColorMatrix type="matrix" values="0.625 0.375 0 0 0
+        0.700 0.300 0 0 0
+        0     0.300 0.700 0 0
+        0     0     0     1 0" result="simulado" />
+        <feComposite in="SourceGraphic" in2="simulado" operator="arithmetic" k1="0" k2="1" k3="-1" k4="0" result="error" />
+        <feColorMatrix in="error" type="matrix" values="0   0   0   0 0
+        0.7 1   0   0 0
+        0.7 0   1   0 0
+        0   0   0   1 0" result="correccion" />
+        <feComposite in="SourceGraphic" in2="correccion" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+      </filter>
+      <filter id="filtro-svg-tritanopia" color-interpolation-filters="linearRGB">
+        <feColorMatrix type="matrix" values="0.950 0.050 0 0 0
+        0     0.433 0.567 0 0
+        0     0.475 0.525 0 0
+        0     0     0     1 0" result="simulado" />
+        <feComposite in="SourceGraphic" in2="simulado" operator="arithmetic" k1="0" k2="1" k3="-1" k4="0" result="error" />
+        <feColorMatrix in="error" type="matrix" values="1 0 0.7 0 0
+        0 1 0.7 0 0
+        0 0 0   0 0
+        0 0 0   1 0" result="correccion" />
+        <feComposite in="SourceGraphic" in2="correccion" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" />
+      </filter>
+    </defs>
+  </svg>
+
+  <input type="radio" name="ajuste-color" id="opcion-color-ninguno" class="conmutador" checked>
+  <input type="radio" name="ajuste-color" id="opcion-color-protanopia" class="conmutador">
+  <input type="radio" name="ajuste-color" id="opcion-color-deuteranopia" class="conmutador">
+  <input type="radio" name="ajuste-color" id="opcion-color-tritanopia" class="conmutador">
+  <input type="radio" name="escala-texto" id="opcion-texto-normal" class="conmutador" checked>
+  <input type="radio" name="escala-texto" id="opcion-texto-grande" class="conmutador">
+  <input type="radio" name="escala-texto" id="opcion-texto-muy-grande" class="conmutador">
+
+  <div class="lienzo">
+    <header class="cabecera" id="arriba" tabindex="-1">
+      <div class="cabecera__interior contenedor">
+
+        <section class="panel-accesibilidad" aria-labelledby="titulo-panel-a11y">
+          <h2 id="titulo-panel-a11y" class="oculto-visual">Opciones de accesibilidad</h2>
+
+          <fieldset class="grupo-opciones">
+            <legend>Ajuste de color</legend>
+            <label for="opcion-color-ninguno"><span class="oculto-visual">Ajuste de color: </span>Sin ajuste</label>
+            <label for="opcion-color-protanopia"><span class="oculto-visual">Ajuste de color para </span>Protanopia</label>
+            <label for="opcion-color-deuteranopia"><span class="oculto-visual">Ajuste de color para </span>Deuteranopia</label>
+            <label for="opcion-color-tritanopia"><span class="oculto-visual">Ajuste de color para </span>Tritanopia</label>
+          </fieldset>
+
+          <fieldset class="grupo-opciones">
+            <legend>Tamaño del texto</legend>
+            <label for="opcion-texto-normal"><span class="oculto-visual">Tamaño del texto: </span>A</label>
+            <label for="opcion-texto-grande"><span class="oculto-visual">Tamaño del texto: </span>A+</label>
+            <label for="opcion-texto-muy-grande"><span class="oculto-visual">Tamaño del texto: </span>A++</label>
+          </fieldset>
+        </section>
+
+        <a class="marca" href="index.html">
+          <img src="favicon.svg" alt="" width="40" height="40">
+          <span class="marca__nombre">Manos de Barro y Lana</span>
+          <span class="marca__bajada">Artesanías</span>
+        </a>
+
+        <nav id="navegacion-principal" tabindex="-1" aria-label="Principal">
+          <ul>
+            <li><a href="index.html" aria-current="page">Inicio</a></li>
+            <li><a href="tejidos.html">Tejidos</a></li>
+            <li><a href="ceramicos.html">Cerámicos</a></li>
+            <li><a href="pinturas.html">Pinturas</a></li>
+            <li><a href="accesibilidad.html">Accesibilidad</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido" class="contenedor" tabindex="-1">
+      <h1>Artesanías hechas a mano en tejido, cerámica y pintura</h1>
+
+      <section aria-labelledby="h-presentacion">
+        <h2 id="h-presentacion">Piezas únicas, de a una</h2>
+        <p class="prosa">En Manos de Barro y Lana trabajamos sin apuro: cada pieza se teje, se tornea o se pinta de a una, con las manos y con el tiempo que pide el oficio. Por eso no hay dos iguales, y las pequeñas diferencias entre una y otra son parte de lo que las hace nuestras.</p>
+        <p class="prosa">Elegimos materiales naturales y procesos simples, para que lo que llega a tu casa dure y se siga viendo bien con los años.</p>
+      </section>
+
+      <section aria-labelledby="h-categorias">
+        <h2 id="h-categorias">Nuestras categorías</h2>
+        <ul class="rejilla-categorias">
+          <li>
+            <article class="tarjeta-categoria">
+              <h3><a href="tejidos.html">Tejidos</a></h3>
+              <p>Ruanas, chales y mantas tejidas en telar y crochet.</p>
+              <p class="tarjeta-categoria__cantidad">3 artículos</p>
+            </article>
+          </li>
+          <li>
+            <article class="tarjeta-categoria">
+              <h3><a href="ceramicos.html">Cerámicos</a></h3>
+              <p>Tazas, bowls y jarrones torneados y esmaltados a mano.</p>
+              <p class="tarjeta-categoria__cantidad">3 artículos</p>
+            </article>
+          </li>
+          <li>
+            <article class="tarjeta-categoria">
+              <h3><a href="pinturas.html">Pinturas</a></h3>
+              <p>Obras originales en acuarela, óleo y acrílico.</p>
+              <p class="tarjeta-categoria__cantidad">3 artículos</p>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="h-como-comprar">
+        <h2 id="h-como-comprar">Cómo comprar</h2>
+        <ol class="pasos">
+          <li>Elegí la pieza que te guste dentro del catálogo de <a href="tejidos.html">Tejidos</a>, <a href="ceramicos.html">Cerámicos</a> o <a href="pinturas.html">Pinturas</a>, y descargá su ficha en PDF para ver materiales, medidas y cuidados.</li>
+          <li>Escribinos contándonos cuál te interesa, por correo a <a href="mailto:contacto@manosdebarroylana.example">contacto@manosdebarroylana.example</a> o por WhatsApp al <a href="https://wa.me/5491100000000">+54 9 11 0000-0000</a>. Te confirmamos disponibilidad y precio.</li>
+          <li>Coordinamos juntas la entrega en el taller de Villa Serrana o el envío a tu domicilio, según dónde estés.</li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="h-taller">
+        <h2 id="h-taller">Sobre el taller</h2>
+        <p class="prosa">El taller queda en Villa Serrana, Córdoba, Argentina, en una casa de patio con galería donde entra buena luz a la mañana. Ahí conviven el telar, el torno de alfarero y los caballetes, y casi siempre hay algo secándose sobre la mesa larga.</p>
+        <p class="prosa">Somos un emprendimiento familiar chico. Producimos por tandas cortas, según los materiales que conseguimos y el tiempo que lleva cada técnica, así que el catálogo cambia seguido. Si algo que viste ya no está, escribinos: muchas veces podemos volver a hacerlo.</p>
+      </section>
+    </main>
+
+    <footer class="pie">
+      <div class="pie__interior contenedor">
+        <h2 class="oculto-visual">Información del sitio</h2>
+
+        <section aria-labelledby="h-pie-contacto">
+          <h3 id="h-pie-contacto">Contacto</h3>
+          <ul class="pie__datos">
+            <li>Correo: <a href="mailto:contacto@manosdebarroylana.example">contacto@manosdebarroylana.example</a></li>
+            <li>WhatsApp: <a href="https://wa.me/5491100000000">+54 9 11 0000-0000</a></li>
+            <li>Taller en Villa Serrana, Córdoba, Argentina</li>
+          </ul>
+        </section>
+
+        <nav aria-labelledby="h-pie-secciones">
+          <h3 id="h-pie-secciones">Secciones</h3>
+          <ul class="pie__enlaces">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="tejidos.html">Tejidos</a></li>
+            <li><a href="ceramicos.html">Cerámicos</a></li>
+            <li><a href="pinturas.html">Pinturas</a></li>
+            <li><a href="accesibilidad.html">Accesibilidad</a></li>
+          </ul>
+        </nav>
+
+        <section aria-labelledby="h-pie-legal">
+          <h3 id="h-pie-legal">Aviso</h3>
+          <p class="pie__legal">Sitio de demostración sin fines comerciales. Los datos de contacto son ficticios y de ejemplo. Las imágenes y los PDF de los artículos son material de boceto.</p>
+        </section>
+
+        <p class="pie__cierre"><a href="#arriba" class="pie__arriba">Volver al inicio de la página</a></p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

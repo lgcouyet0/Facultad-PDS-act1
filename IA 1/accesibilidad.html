@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Declaración de accesibilidad | Manos de Barro y Lana</title>
+<meta name="description" content="Nivel de conformidad WCAG 2.2 AA, funciones de accesibilidad disponibles y limitaciones conocidas.">
+<meta name="author" content="Manos de Barro y Lana">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#7A3E12" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14110F" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://manosdebarroylana.example/accesibilidad.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="estilosIA.css">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Manos de Barro y Lana">
+<meta property="og:title" content="Declaración de accesibilidad | Manos de Barro y Lana">
+<meta property="og:description" content="Nivel de conformidad WCAG 2.2 AA, funciones de accesibilidad disponibles y limitaciones conocidas.">
+<meta property="og:url" content="https://manosdebarroylana.example/accesibilidad.html">
+</head>
+<body>
+<nav class="saltos" aria-label="Saltos de navegación">
+<a href="#contenido">Saltar al contenido principal</a>
+<a href="#navegacion-principal">Saltar a la navegación principal</a>
+</nav>
+
+<svg class="svg-filtros" width="0" height="0" aria-hidden="true" focusable="false">
+<defs>
+<filter id="filtro-svg-protanopia" color-interpolation-filters="linearRGB">
+<feColorMatrix type="matrix"
+values="0.567 0.433 0 0 0
+        0.558 0.442 0 0 0
+        0     0.242 0.758 0 0
+        0     0     0     1 0" result="simulado"/>
+<feComposite in="SourceGraphic" in2="simulado" operator="arithmetic" k1="0" k2="1" k3="-1" k4="0" result="error"/>
+<feColorMatrix in="error" type="matrix"
+values="0   0   0   0 0
+        0.7 1   0   0 0
+        0.7 0   1   0 0
+        0   0   0   1 0" result="correccion"/>
+<feComposite in="SourceGraphic" in2="correccion" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+</filter>
+<filter id="filtro-svg-deuteranopia" color-interpolation-filters="linearRGB">
+<feColorMatrix type="matrix"
+values="0.625 0.375 0 0 0
+        0.700 0.300 0 0 0
+        0     0.300 0.700 0 0
+        0     0     0     1 0" result="simulado"/>
+<feComposite in="SourceGraphic" in2="simulado" operator="arithmetic" k1="0" k2="1" k3="-1" k4="0" result="error"/>
+<feColorMatrix in="error" type="matrix"
+values="0   0   0   0 0
+        0.7 1   0   0 0
+        0.7 0   1   0 0
+        0   0   0   1 0" result="correccion"/>
+<feComposite in="SourceGraphic" in2="correccion" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+</filter>
+<filter id="filtro-svg-tritanopia" color-interpolation-filters="linearRGB">
+<feColorMatrix type="matrix"
+values="0.950 0.050 0 0 0
+        0     0.433 0.567 0 0
+        0     0.475 0.525 0 0
+        0     0     0     1 0" result="simulado"/>
+<feComposite in="SourceGraphic" in2="simulado" operator="arithmetic" k1="0" k2="1" k3="-1" k4="0" result="error"/>
+<feColorMatrix in="error" type="matrix"
+values="1 0 0.7 0 0
+        0 1 0.7 0 0
+        0 0 0   0 0
+        0 0 0   1 0" result="correccion"/>
+<feComposite in="SourceGraphic" in2="correccion" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+</filter>
+</defs>
+</svg>
+
+<input type="radio" name="ajuste-color" id="opcion-color-ninguno" class="conmutador" checked>
+<input type="radio" name="ajuste-color" id="opcion-color-protanopia" class="conmutador">
+<input type="radio" name="ajuste-color" id="opcion-color-deuteranopia" class="conmutador">
+<input type="radio" name="ajuste-color" id="opcion-color-tritanopia" class="conmutador">
+<input type="radio" name="escala-texto" id="opcion-texto-normal" class="conmutador" checked>
+<input type="radio" name="escala-texto" id="opcion-texto-grande" class="conmutador">
+<input type="radio" name="escala-texto" id="opcion-texto-muy-grande" class="conmutador">
+
+<div class="lienzo">
+<header class="cabecera" id="arriba" tabindex="-1">
+<div class="cabecera__interior contenedor">
+
+<section class="panel-accesibilidad" aria-labelledby="titulo-panel-a11y">
+<h2 id="titulo-panel-a11y" class="oculto-visual">Opciones de accesibilidad</h2>
+
+<fieldset class="grupo-opciones">
+<legend>Ajuste de color</legend>
+<label for="opcion-color-ninguno"><span class="oculto-visual">Ajuste de color: </span>Sin ajuste</label>
+<label for="opcion-color-protanopia"><span class="oculto-visual">Ajuste de color para </span>Protanopia</label>
+<label for="opcion-color-deuteranopia"><span class="oculto-visual">Ajuste de color para </span>Deuteranopia</label>
+<label for="opcion-color-tritanopia"><span class="oculto-visual">Ajuste de color para </span>Tritanopia</label>
+</fieldset>
+
+<fieldset class="grupo-opciones">
+<legend>Tamaño del texto</legend>
+<label for="opcion-texto-normal"><span class="oculto-visual">Tamaño del texto: </span>A</label>
+<label for="opcion-texto-grande"><span class="oculto-visual">Tamaño del texto: </span>A+</label>
+<label for="opcion-texto-muy-grande"><span class="oculto-visual">Tamaño del texto: </span>A++</label>
+</fieldset>
+</section>
+
+<a class="marca" href="index.html">
+<img src="favicon.svg" alt="" width="40" height="40">
+<span class="marca__nombre">Manos de Barro y Lana</span>
+<span class="marca__bajada">Artesanías</span>
+</a>
+
+<nav id="navegacion-principal" tabindex="-1" aria-label="Principal">
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="tejidos.html">Tejidos</a></li>
+<li><a href="ceramicos.html">Cerámicos</a></li>
+<li><a href="pinturas.html">Pinturas</a></li>
+<li><a href="accesibilidad.html" aria-current="page">Accesibilidad</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main id="contenido" class="contenedor" tabindex="-1">
+<h1>Declaración de accesibilidad</h1>
+
+<section aria-labelledby="h-compromiso">
+<h2 id="h-compromiso">Compromiso</h2>
+<p class="prosa">En Manos de Barro y Lana queremos que cualquier persona pueda recorrer nuestro catálogo sin barreras. Por eso desarrollamos este sitio tomando como referencia las Pautas de Accesibilidad para el Contenido Web (WCAG) 2.2, con el objetivo de alcanzar el nivel de conformidad AA.</p>
+<p class="prosa">Revisamos el sitio con validadores de HTML, de CSS y de accesibilidad, y lo probamos usando solamente el teclado. Cuando encontramos algo que no cumple, lo corregimos y lo dejamos anotado en la sección de limitaciones conocidas.</p>
+</section>
+
+<section aria-labelledby="h-funciones">
+<h2 id="h-funciones">Funciones de accesibilidad</h2>
+<ul class="lista-simple">
+<li>Saltos de navegación al inicio de cada página, para ir directo al contenido principal o al menú sin recorrer todo lo anterior.</li>
+<li>Ajuste de color para daltonismo (protanopia, deuteranopia y tritanopia). Es un filtro de <strong>corrección</strong>, no de simulación: redistribuye la información de color hacia los canales que la persona sí distingue, para que los tonos que normalmente se confunden se vuelvan diferenciables.</li>
+<li>Tres tamaños de texto (A, A+ y A++), que se aplican a todo el contenido de la página sin cortar ni superponer elementos.</li>
+<li>Modo oscuro y alto contraste automáticos, según la configuración del sistema operativo.</li>
+<li>Navegación completa por teclado, con foco siempre visible y un orden de lectura que coincide con el orden visual.</li>
+</ul>
+</section>
+
+<section aria-labelledby="h-teclado">
+<h2 id="h-teclado">Navegación por teclado</h2>
+<table class="tabla-teclado">
+<caption>Teclas disponibles para recorrer el sitio y qué hace cada una</caption>
+<thead>
+<tr>
+<th scope="col">Tecla</th>
+<th scope="col">Qué hace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Tab</th>
+<td>Avanza al siguiente elemento interactivo: saltos de navegación, opciones de accesibilidad, marca, menú, enlaces del contenido y del pie, en ese orden.</td>
+</tr>
+<tr>
+<th scope="row">Mayús + Tab</th>
+<td>Retrocede al elemento interactivo anterior, siguiendo el mismo recorrido en sentido inverso.</td>
+</tr>
+<tr>
+<th scope="row">Flechas</th>
+<td>Dentro de las opciones de accesibilidad, se mueve entre las alternativas de un mismo grupo y aplica el cambio al instante. Fuera de los grupos, desplaza la página.</td>
+</tr>
+<tr>
+<th scope="row">Enter</th>
+<td>Activa el enlace que tiene el foco: abre la categoría, descarga la ficha en PDF o vuelve al inicio de la página.</td>
+</tr>
+<tr>
+<th scope="row">Espacio</th>
+<td>Confirma la opción de accesibilidad que tiene el foco. Si el foco no está en un grupo de opciones, avanza una pantalla hacia abajo.</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<section aria-labelledby="h-limitaciones">
+<h2 id="h-limitaciones">Limitaciones conocidas</h2>
+<ul class="lista-simple">
+<li>El ajuste de color y el tamaño de texto no se conservan al cambiar de página, porque el sitio no usa JavaScript. Hay que volver a elegirlos en cada página.</li>
+<li>Los PDF de los artículos son informativos y corresponden a una versión de boceto.</li>
+<li>Las imágenes de los artículos son marcadores de posición temporales.</li>
+</ul>
+</section>
+
+<section aria-labelledby="h-contacto">
+<h2 id="h-contacto">Cómo reportar una barrera de accesibilidad</h2>
+<p class="prosa">Si encontrás algo que te impide usar el sitio, escribinos y lo revisamos. Contanos en qué página pasó, qué estabas intentando hacer y, si podés, con qué navegador, sistema operativo o lector de pantalla lo estabas usando: con esos datos lo reproducimos mucho más rápido.</p>
+<p class="prosa">Podés escribirnos por correo a <a href="mailto:contacto@manosdebarroylana.example">contacto@manosdebarroylana.example</a> o por WhatsApp al <a href="https://wa.me/5491100000000">+54 9 11 0000-0000</a>.</p>
+</section>
+</main>
+
+<footer class="pie">
+<div class="pie__interior contenedor">
+<h2 class="oculto-visual">Información del sitio</h2>
+
+<section aria-labelledby="h-pie-contacto">
+<h3 id="h-pie-contacto">Contacto</h3>
+<ul class="pie__datos">
+<li>Correo: <a href="mailto:contacto@manosdebarroylana.example">contacto@manosdebarroylana.example</a></li>
+<li>WhatsApp: <a href="https://wa.me/5491100000000">+54 9 11 0000-0000</a></li>
+<li>Taller en Villa Serrana, Córdoba, Argentina</li>
+</ul>
+</section>
+
+<nav aria-labelledby="h-pie-secciones">
+<h3 id="h-pie-secciones">Secciones</h3>
+<ul class="pie__enlaces">
+<li><a href="index.html">Inicio</a></li>
+<li><a href="tejidos.html">Tejidos</a></li>
+<li><a href="ceramicos.html">Cerámicos</a></li>
+<li><a href="pinturas.html">Pinturas</a></li>
+<li><a href="accesibilidad.html">Accesibilidad</a></li>
+</ul>
+</nav>
+
+<section aria-labelledby="h-pie-legal">
+<h3 id="h-pie-legal">Aviso</h3>
+<p class="pie__legal">Sitio de demostración sin fines comerciales. Los datos de contacto son ficticios y de ejemplo. Las imágenes y los PDF de los artículos son material de boceto.</p>
+</section>
+
+<p class="pie__cierre"><a href="#arriba" class="pie__arriba">Volver al inicio de la página</a></p>
+</div>
+</footer>
+</div>
+</body>
+</html>

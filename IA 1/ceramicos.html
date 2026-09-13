@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cerámicos | Manos de Barro y Lana</title>
+<meta name="description" content="Tazas, bowls y jarrones de gres y arcilla, torneados y esmaltados a mano pieza por pieza.">
+<meta name="author" content="Manos de Barro y Lana">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#7A3E12" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14110F" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://manosdebarroylana.example/ceramicos.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="estilosIA.css">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:site_name" content="Manos de Barro y Lana">
+<meta property="og:title" content="Cerámicos | Manos de Barro y Lana">
+<meta property="og:description" content="Tazas, bowls y jarrones de gres y arcilla, torneados y esmaltados a mano pieza por pieza.">
+<meta property="og:url" content="https://manosdebarroylana.example/ceramicos.html">
+<meta property="og:image" content="https://manosdebarroylana.example/articulos/ceramicos/taza-de-gres-esmaltada.png">
+<meta property="og:image:alt" content="Taza de gres torneada a mano, esmalte mate color arena, con asa gruesa e irregular.">
+</head>
+<body>
+<nav class="saltos" aria-label="Saltos de navegación">
+<a href="#contenido">Saltar al contenido principal</a>
+<a href="#navegacion-principal">Saltar a la navegación principal</a>
+</nav>
+
+<svg class="svg-filtros" width="0" height="0" aria-hidden="true" focusable="false">
+<defs>
+<filter id="filtro-svg-protanopia" color-interpolation-filters="linearRGB">
+<feColorMatrix type="matrix"
+values="0.567 0.433 0 0 0
+        0.558 0.442 0 0 0
+        0     0.242 0.758 0 0
+        0     0     0     1 0" result="simulado"/>
+<feComposite in="SourceGraphic" in2="simulado" operator="arithmetic" k1="0" k2="1" k3="-1" k4="0" result="error"/>
+<feColorMatrix in="error" type="matrix"
+values="0   0   0   0 0
+        0.7 1   0   0 0
+        0.7 0   1   0 0
+        0   0   0   1 0" result="correccion"/>
+<feComposite in="SourceGraphic" in2="correccion" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+</filter>
+<filter id="filtro-svg-deuteranopia" color-interpolation-filters="linearRGB">
+<feColorMatrix type="matrix"
+values="0.625 0.375 0 0 0
+        0.700 0.300 0 0 0
+        0     0.300 0.700 0 0
+        0     0     0     1 0" result="simulado"/>
+<feComposite in="SourceGraphic" in2="simulado" operator="arithmetic" k1="0" k2="1" k3="-1" k4="0" result="error"/>
+<feColorMatrix in="error" type="matrix"
+values="0   0   0   0 0
+        0.7 1   0   0 0
+        0.7 0   1   0 0
+        0   0   0   1 0" result="correccion"/>
+<feComposite in="SourceGraphic" in2="correccion" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+</filter>
+<filter id="filtro-svg-tritanopia" color-interpolation-filters="linearRGB">
+<feColorMatrix type="matrix"
+values="0.950 0.050 0 0 0
+        0     0.433 0.567 0 0
+        0     0.475 0.525 0 0
+        0     0     0     1 0" result="simulado"/>
+<feComposite in="SourceGraphic" in2="simulado" operator="arithmetic" k1="0" k2="1" k3="-1" k4="0" result="error"/>
+<feColorMatrix in="error" type="matrix"
+values="1 0 0.7 0 0
+        0 1 0.7 0 0
+        0 0 0   0 0
+        0 0 0   1 0" result="correccion"/>
+<feComposite in="SourceGraphic" in2="correccion" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+</filter>
+</defs>
+</svg>
+
+<input type="radio" name="ajuste-color" id="opcion-color-ninguno" class="conmutador" checked>
+<input type="radio" name="ajuste-color" id="opcion-color-protanopia" class="conmutador">
+<input type="radio" name="ajuste-color" id="opcion-color-deuteranopia" class="conmutador">
+<input type="radio" name="ajuste-color" id="opcion-color-tritanopia" class="conmutador">
+<input type="radio" name="escala-texto" id="opcion-texto-normal" class="conmutador" checked>
+<input type="radio" name="escala-texto" id="opcion-texto-grande" class="conmutador">
+<input type="radio" name="escala-texto" id="opcion-texto-muy-grande" class="conmutador">
+
+<div class="lienzo">
+<header class="cabecera" id="arriba" tabindex="-1">
+<div class="cabecera__interior contenedor">
+
+<section class="panel-accesibilidad" aria-labelledby="titulo-panel-a11y">
+<h2 id="titulo-panel-a11y" class="oculto-visual">Opciones de accesibilidad</h2>
+
+<fieldset class="grupo-opciones">
+<legend>Ajuste de color</legend>
+<label for="opcion-color-ninguno"><span class="oculto-visual">Ajuste de color: </span>Sin ajuste</label>
+<label for="opcion-color-protanopia"><span class="oculto-visual">Ajuste de color para </span>Protanopia</label>
+<label for="opcion-color-deuteranopia"><span class="oculto-visual">Ajuste de color para </span>Deuteranopia</label>
+<label for="opcion-color-tritanopia"><span class="oculto-visual">Ajuste de color para </span>Tritanopia</label>
+</fieldset>
+
+<fieldset class="grupo-opciones">
+<legend>Tamaño del texto</legend>
+<label for="opcion-texto-normal"><span class="oculto-visual">Tamaño del texto: </span>A</label>
+<label for="opcion-texto-grande"><span class="oculto-visual">Tamaño del texto: </span>A+</label>
+<label for="opcion-texto-muy-grande"><span class="oculto-visual">Tamaño del texto: </span>A++</label>
+</fieldset>
+</section>
+
+<a class="marca" href="index.html">
+<img src="favicon.svg" alt="" width="40" height="40">
+<span class="marca__nombre">Manos de Barro y Lana</span>
+<span class="marca__bajada">Artesanías</span>
+</a>
+
+<nav id="navegacion-principal" tabindex="-1" aria-label="Principal">
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="tejidos.html">Tejidos</a></li>
+<li><a href="ceramicos.html" aria-current="page">Cerámicos</a></li>
+<li><a href="pinturas.html">Pinturas</a></li>
+<li><a href="accesibilidad.html">Accesibilidad</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<main id="contenido" class="contenedor" tabindex="-1">
+<nav aria-label="Ruta de navegación">
+<ol class="migas">
+<li><a href="index.html">Inicio</a></li>
+<li><span aria-current="page">Cerámicos</span></li>
+</ol>
+</nav>
+
+<h1>Cerámicos</h1>
+<p class="intro">Piezas de gres y arcilla torneadas en el torno de pie y esmaltadas a mano, una por una.</p>
+
+<section aria-labelledby="h-listado">
+<h2 id="h-listado">Artículos disponibles (3)</h2>
+<ul class="rejilla-articulos">
+<li>
+<article class="tarjeta-articulo">
+<h3>Taza de gres esmaltada</h3>
+<img class="tarjeta-articulo__imagen"
+     src="articulos/ceramicos/taza-de-gres-esmaltada.png"
+     alt="Taza de gres torneada a mano, esmalte mate color arena, con asa gruesa e irregular."
+     width="800" height="800" decoding="async">
+<p class="tarjeta-articulo__descripcion">Taza de gres torneada a mano con esmalte mate color arena.</p>
+<p class="tarjeta-articulo__acciones">
+<a class="enlace-info" href="articulos/ceramicos/taza-de-gres-esmaltada.pdf" type="application/pdf" download>
++info<span class="oculto-visual"> sobre Taza de gres esmaltada</span>
+<span class="enlace-info__meta">(PDF)</span>
+</a>
+</p>
+</article>
+</li>
+<li>
+<article class="tarjeta-articulo">
+<h3>Bowl de cerámica rústica</h3>
+<img class="tarjeta-articulo__imagen"
+     src="articulos/ceramicos/bowl-de-ceramica-rustica.png"
+     alt="Bowl hondo de cerámica rústica con borde irregular y esmalte verde oliva brillante en el interior."
+     width="800" height="800" loading="lazy" decoding="async">
+<p class="tarjeta-articulo__descripcion">Bowl profundo de borde irregular con esmalte verde oliva.</p>
+<p class="tarjeta-articulo__acciones">
+<a class="enlace-info" href="articulos/ceramicos/bowl-de-ceramica-rustica.pdf" type="application/pdf" download>
++info<span class="oculto-visual"> sobre Bowl de cerámica rústica</span>
+<span class="enlace-info__meta">(PDF)</span>
+</a>
+</p>
+</article>
+</li>
+<li>
+<article class="tarjeta-articulo">
+<h3>Jarrón de arcilla negra</h3>
+<img class="tarjeta-articulo__imagen"
+     src="articulos/ceramicos/jarron-de-arcilla-negra.png"
+     alt="Jarrón alto de arcilla negra bruñida, de cuello angosto y superficie con brillo satinado."
+     width="800" height="800" loading="lazy" decoding="async">
+<p class="tarjeta-articulo__descripcion">Jarrón alto de arcilla negra bruñida, inspirado en alfarería tradicional.</p>
+<p class="tarjeta-articulo__acciones">
+<a class="enlace-info" href="articulos/ceramicos/jarron-de-arcilla-negra.pdf" type="application/pdf" download>
++info<span class="oculto-visual"> sobre Jarrón de arcilla negra</span>
+<span class="enlace-info__meta">(PDF)</span>
+</a>
+</p>
+</article>
+</li>
+</ul>
+</section>
+
+<aside class="consejos" aria-labelledby="h-consejos">
+<h2 id="h-consejos">Cuidado de los cerámicos</h2>
+<ul class="lista-simple">
+<li>Lavá a mano con esponja suave; el lavavajillas desgasta el esmalte con el tiempo.</li>
+<li>Evitá los cambios bruscos de temperatura: la pieza puede fisurarse.</li>
+<li>No uses esponjas metálicas ni polvos abrasivos sobre las superficies esmaltadas.</li>
+<li>Apoyá y apilá con cuidado; las bases sin esmalte pueden rayar otras piezas.</li>
+</ul>
+</aside>
+</main>
+
+<footer class="pie">
+<div class="pie__interior contenedor">
+<h2 class="oculto-visual">Información del sitio</h2>
+
+<section aria-labelledby="h-pie-contacto">
+<h3 id="h-pie-contacto">Contacto</h3>
+<ul class="pie__datos">
+<li>Correo: <a href="mailto:contacto@manosdebarroylana.example">contacto@manosdebarroylana.example</a></li>
+<li>WhatsApp: <a href="https://wa.me/5491100000000">+54 9 11 0000-0000</a></li>
+<li>Taller en Villa Serrana, Córdoba, Argentina</li>
+</ul>
+</section>
+
+<nav aria-labelledby="h-pie-secciones">
+<h3 id="h-pie-secciones">Secciones</h3>
+<ul class="pie__enlaces">
+<li><a href="index.html">Inicio</a></li>
+<li><a href="tejidos.html">Tejidos</a></li>
+<li><a href="ceramicos.html">Cerámicos</a></li>
+<li><a href="pinturas.html">Pinturas</a></li>
+<li><a href="accesibilidad.html">Accesibilidad</a></li>
+</ul>
+</nav>
+
+<section aria-labelledby="h-pie-legal">
+<h3 id="h-pie-legal">Aviso</h3>
+<p class="pie__legal">Sitio de demostración sin fines comerciales. Los datos de contacto son ficticios y de ejemplo. Las imágenes y los PDF de los artículos son material de boceto.</p>
+</section>
+
+<p class="pie__cierre"><a href="#arriba" class="pie__arriba">Volver al inicio de la página</a></p>
+</div>
+</footer>
+</div>
+</body>
+</html>
